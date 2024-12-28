@@ -40,9 +40,9 @@ services:
     image: iuri/venus-mk2-dbus
     restart: always
     devices:
-      - "/dev/tty0:/dev/ttyS0"
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
     environment:
-      - "MK3DEV=/dev/ttyS0"
+      - "MK3DEV=/dev/ttyUSB0"
     volumes:
       - "var_run_dbus:/var/run/dbus"
       - "data:/data"
