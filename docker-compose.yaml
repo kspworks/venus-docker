@@ -41,7 +41,7 @@ services:
     devices:
       - "/dev/tty0:/dev/ttyS0"
     environment:
-      - "MK3DEV=ttyS0"
+      - "MK3DEV=/dev/ttyS0"
     volumes:
       - "var_run_dbus:/var/run/dbus"
       - "data:/data"
