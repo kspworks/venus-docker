@@ -76,6 +76,13 @@ services:
       - mosquitto-data:/mosquitto/data
       - mosquitto-log:/mosquitto/log
     restart: always
+  modbus:
+    build: ./modbus
+    restart: always
+    volumes:
+      - "var_run_dbus:/var/run/dbus"
+    ports:
+      - "502:502"
 volumes:
   mosquitto-config:
   mosquitto-data:
