@@ -79,10 +79,9 @@ services:
   modbus:
     build: ./modbus
     restart: always
+    network_mode: host
     volumes:
       - "var_run_dbus:/var/run/dbus"
-    ports:
-      - "502:502"
 volumes:
   mosquitto-config:
   mosquitto-data:
