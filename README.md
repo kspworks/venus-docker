@@ -16,6 +16,10 @@ The Docker images are built using the [Debian Buster packages](https://github.co
 
 Here's a quick definition of each of the Docker images in this repository.
 
+### modbus
+
+Used to expose data to Home Assistant ([hass-victron](https://github.com/remcom/hass-victron) extension) via port 502.
+
 ### dbus
 
 Runs the D-Bus on a socket at `/var/run/dbus/system_bus_socket`. A volume should be mounted at `/var/run/dbus/` and shared with all other containers so they can all access the D-Bus. This container is only needed in case you want to run the Venus services on an isolated D-Bus. If you want to run them on the host system D-Bus then you can omit this container and mount the host system D-Bus socket in the other services instead (check out the [`system-dbus` example](#host-system-dbus)).
