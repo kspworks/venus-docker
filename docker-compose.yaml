@@ -78,6 +78,9 @@ services:
     restart: always
   modbus:
     build: ./modbus
+    depends_on:
+      - dbus
+      - mk2-dbus
     restart: always
     network_mode: host
     volumes:
